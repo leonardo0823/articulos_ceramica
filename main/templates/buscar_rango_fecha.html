@@ -31,7 +31,7 @@
 
 
   <div class="container-fluid">
-    <div class="row align-items-center justify-content-center" >
+    <div class="row align-items-center justify-content-center">
       <div class="container-fluid align-items-center justify-content-center d-inline-flex mx-4 pt-4">
         <a href="{% url 'main:index' %}" class="btn btn-secondary bg-transparent mx-4">
           <i class="fa fa-arrow-left"></i>
@@ -44,11 +44,13 @@
       </div>
       <div class="container-fluid align-items-center justify-content-center d-inline-flex my-4">
         <form class="d-flex ms-4" method="get" action="{% url 'main:buscar_rango_fecha' %}" novalidate>
-            <input id="start" class="form-control bg-white border-0 mx-2 text-dark" name="start" type="date" placeholder="Fecha Inicial">
-            <input id="end" class="form-control bg-white border-0 mx-2 text-dark" name="end" type="date" placeholder="Fecha final">
-            
-            <button type="submit" class="btn btn-primary mx-2">Buscar</button>
-            
+          <input id="start" class="form-control bg-white border-0 mx-2 text-dark" name="start" type="date"
+            placeholder="Fecha Inicial">
+          <input id="end" class="form-control bg-white border-0 mx-2 text-dark" name="end" type="date"
+            placeholder="Fecha final">
+
+          <button type="submit" class="btn btn-primary mx-2">Buscar</button>
+
         </form>
       </div>
 
@@ -141,17 +143,17 @@
   </div>
 
   <script>
-    window.addEventListener('load', (w, e) =>{
-        const valores = window.location.search;
-        const urlParams = new URLSearchParams(valores)
-        var start = urlParams.get('start')
-        var end = urlParams.get('end')
-        if (start!=null && end!=null){
-            startInput = document.querySelector("#start");
-            endInput = document.querySelector("#end");
-            startInput.value = start;
-            endInput.value = end;
-        }
+    window.addEventListener('load', (w, e) => {
+      const valores = window.location.search;
+      const urlParams = new URLSearchParams(valores)
+      var start = urlParams.get('start')
+      var end = urlParams.get('end')
+      if (start != null && end != null) {
+        startInput = document.querySelector("#start");
+        endInput = document.querySelector("#end");
+        startInput.value = start;
+        endInput.value = end;
+      }
     })
   </script>
 

@@ -31,14 +31,6 @@
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
-        <!-- Spinner Start -->
-        <!-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div> -->
-        <!-- Spinner End -->
-
 
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
@@ -53,7 +45,6 @@
                     <div class="nav-item dropdown">
                         <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-solid fa-industry me-2"></i>Talleres</div>
                         <div class="dropdown-menu bg-transparent border-0">
-                           <!-- <small class=""><a href="#" class="btn btn-secondary btn-sm mx-4 border border-white"><i class="fa fa-plus bg-transparent px-2"></i>Agregar</a></small> -->
                             {% for taller in  talleres%}
                                 <a href="{% url 'main:taller' taller.pk %}" class="dropdown-item mx-4">{{taller.codigo}} {{taller}}</a>
                             {% empty %}
@@ -96,7 +87,6 @@
             <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
                 <a href="{% url 'main:index' %}" class="navbar-brand d-flex me-4">
                     <h2 class="text-primary mb-0">
-                        <!-- <i class="fa fa-home"></i> -->
                         <img src="{% static 'img/logo.svg' %}" alt="Logo" width="49" height="42">
                     </h2>
                 </a>
@@ -107,14 +97,6 @@
                     <input id="q" class="form-control bg-dark border-0" name="q" type="search" placeholder="Buscar Artículos">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <!-- <div class="my-2">
-                        
-                            <a href="{% url 'main:agregar_articulo' %}" class="btn btn-secondary btn-sm mx-4 border border-white">
-                                <i class="fa fa-plus bg-transparent px-2"></i>Agregar Artículo
-                            </a>
-                       
-                    </div>
-                    -->
                     <div class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="bi bi-menu-button-wide-fill me-lg-2"></i>
@@ -124,18 +106,15 @@
                             <a href="{% url 'main:agregar_articulo' %}" class="dropdown-item">
                                 
                                 <h6 class="fw-normal mb-0">Agregar Artículo</h6>
-                                <!-- <small>15 minutes ago</small> -->
                             </a>
                             <a href="{% url 'main:buscar_rango_fecha' %}" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">Buscar por rango de fecha</h6>
-                                <!-- <small>15 minutes ago</small> -->
                             </a>
                             
                             <hr class="dropdown-divider">
 
                             <a href="{% url 'main:acerca_de' %}" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">Acerca de</h6>
-                                <!-- <small>15 minutes ago</small> -->
                             </a>
                            
                         </div>
@@ -164,7 +143,6 @@
                             &copy; <a href="https://leonardo0823.pythonanywhere.com" target="_blank">Ceramix</a>, Todos los Derechos Reservados. 
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Diseñado Por <a href="https://github.com/leonardo0823">Leonardo A. Moreira Rodríguez</a>
                             <br>Distribuido por: <a href="https://github.com/leonardo0823/articulos_ceramica" target="_blank">Git Hub</a>
                         </div>
@@ -175,9 +153,6 @@
         </div>
         <!-- Content End -->
 
-
-        <!-- Back to Top -->
-        <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
     </div>
 
     <script>
